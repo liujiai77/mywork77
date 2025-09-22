@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页布局示例</title>
+    <style>
+        body {
+            font-family: 仿宋;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfbf1;
+            color: black;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fdfbf1;
+            border-bottom: 1px solid #000;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .content {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 200px;
+            margin-right: 20px;
+        }
+
+        .main-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .product-item {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-image {
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+        .square {
+            border: 1px solid black;
+            aspect-ratio: 1;
+        }
+
+        .product-details {
+            grid-column: span 4; /* 详细产品介绍占据整行 */
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">企业logo (白底黑色图案)</div>
+        <div class="nav">
+            <span>首页</span>
+            <span>产品</span>
+            <span>关于我们</span>
+            <span>联系</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="sidebar">
+            <p>产品 </p>
+            <p>产品分类 ▼</p>
+            <p>产品详情 ▼</p>
+            <p>特色优势</p>
+            <p>产品链接</p>
+        </div>
+
+        <div class="main-content">
+            <div class="product-item">
+                <div class="product-image">产品图片</div>
+                <div>名称</div>
+            </div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            
+             </div>
+    </div>
+</body>
+</html>
