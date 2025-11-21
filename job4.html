@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亲子故事会 · Kids Story Time</title>
+    <style>
+        .page {
+            display: inline-block;
+            background-color: #FCE9C9; /* 蜂蜜金背景色 */
+            box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+            text-align: left;
+            max-width: 720px;
+            padding: 30px;
+            margin: 20px auto;
+            font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+        }
+        
+        /* 并集选择器 */
+        h1, h2, h3, h4, h5, h6 {
+            color: #8B4513;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #D2691E;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px dashed #DEB887;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            margin-top: 25px;
+            color: #CD853F;
+        }
+        
+        /* 伪元素 */
+        p::first-letter {
+            font-size: 1.8em;
+            color: #D2691E;
+            font-weight: bold;
+        }
+        
+        div::first-line {
+            line-height: 1.8;
+        }
+        
+        /* ID选择器 */
+        p#intro {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #FF4500;
+            background-color: #FFF8DC;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 5px solid #FF4500;
+        }
+        
+        /* 表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #FFF8DC;
+        }
+        
+        th, td {
+            border: 2px solid #DEB887;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #FFDEAD;
+            font-weight: bold;
+            color: #8B4513;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #FFFAF0;
+        }
+        
+        /* 后代选择器 */
+        div table a {
+            color: #4169E1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* 链接伪类 */
+        a:link {
+            color: #4169E1;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: #8A2BE2;
+        }
+        
+        a:hover {
+            color: #FF4500;
+            text-decoration: underline;
+        }
+        
+        a:active {
+            color: #FF6347;
+        }
+        
+        /* 带类名的链接 */
+        a.red {
+            color: #FF4500;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        a.blue {
+            color: #1E90FF;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        /* 底部公告区 */
+        .notice {
+            background-color: #FFF8DC;
+            padding: 15px;
+            border-radius: 5px;
+            border: 2px dashed #DEB887;
+            margin-top: 30px;
+        }
+        
+        .notice p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+        
+        /* 链接容器 */
+        .link-container {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #FFF8DC;
+            border-radius: 5px;
+        }
+        
+        .link-container a {
+            margin-right: 20px;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        
+        .link-container a.red {
+            background-color: #FFE4E1;
+        }
+        
+        .link-container a.blue {
+            background-color: #E6F3FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- 顶部标题区 -->
+        <div>
+            <h1>亲子故事会 · Kids Story Time</h1>
+        </div>
+        
+        <!-- 活动介绍区 -->
+        <div>
+            <h2 id="intro">🎪 活动介绍</h2>
+            <p>亲爱的小朋友和爸爸妈妈们，欢迎来到我们充满魔法的亲子故事会！在这里，我们将一起进入奇妙的故事世界，探索各种有趣的冒险和美好的情感。</p>
+            <p>每个周末，我们都会为大家带来精彩的故事讲述、互动游戏和手工制作环节。通过故事，孩子们可以培养想象力、提高语言表达能力，同时也能增进亲子之间的感情。</p>
+            <p id="intro">✨ 重要提示：请爸爸妈妈们提前15分钟带小朋友到场，我们会为每个孩子准备一份小礼物哦！</p>
+        </div>
+        
+        <!-- 活动报名信息表格区 -->
+        <div>
+            <h3>📝 本期故事会报名名单</h3>
+            <table>
+                <tr>
+                    <th>序号</th>
+                    <th>小朋友姓名</th>
+                    <th>家长姓名</th>
+                    <th>联系电话</th>
+                    <th>报名状态</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>多多</td>
+                    <td>李女士</td>
+                    <td>138****1234</td>
+                    <td><a href="#">已确认</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>球球</td>
+                    <td>王先生</td>
+                    <td>139****5678</td>
+                    <td><a href="#">已确认</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>乐乐</td>
+                    <td>张女士</td>
+                    <td>137****9012</td>
+                    <td><a href="#">已确认</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>朵朵</td>
+                    <td>刘先生</td>
+                    <td>136****3456</td>
+                    <td><a href="#">待确认</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>阳阳</td>
+                    <td>陈女士</td>
+                    <td>135****7890</td>
+                    <td><a href="#">待确认</a></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 页面链接区 -->
+        <div>
+            <h3>🔗 相关链接</h3>
+            <div class="link-container">
+                <a href="https://hongchenwusdnu.github.io/bookstore/job4.html" class="red" target="_blank">📷 查看往期活动照片</a>
+                <a href="job3.html" class="blue" target="_blank">💬 在线咨询活动详情</a>
+            </div>
+        </div>
+        
+        <!-- 底部公告区 -->
+        <div class="notice">
+            <h3>📢 最新公告</h3>
+            <p>1. 本周六（5月20日）的故事会主题是"森林里的音乐会"，我们将邀请专业的音乐老师为大家带来精彩的表演！</p>
+            <p>2. 由于报名人数较多，请大家提前在我们的官方微信公众号上预约报名，现场将优先安排预约的家庭。</p>
+            <p>3. 为了给孩子们创造更好的阅读环境，我们欢迎大家捐赠适合3-8岁儿童阅读的绘本故事书。<br>捐赠的书籍将用于我们的"爱心图书角"，让更多孩子受益。</p>
+            <p>4. 下期故事会我们将举办"小小故事家"活动，欢迎小朋友们提前准备一个简短的故事，上台分享给大家！</p>
+        </div>
+    </div>
+</body>
+</html>
